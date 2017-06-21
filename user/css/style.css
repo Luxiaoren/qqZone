@@ -1,6 +1,19 @@
 *{
 	margin:0 auto;
 }
+#perShow{
+	width: 30%;
+	height: 500px;
+	margin-left: 35%;
+	float: left;
+	background-color:blue;
+
+
+}
+
+#perShow input{
+	color:gray;
+}
 #top{
 	width:100%;
 	height:60px;
@@ -47,6 +60,7 @@
 	text-decoration: none;	 
 
 }
+
 
 .buttonStyle{
 	margin-left:80%;

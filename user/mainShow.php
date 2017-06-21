@@ -29,6 +29,8 @@ $email=$_SESSION['email'];
 ?>
 <html>
 	<head>
+	<title>主页</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 		<style>
 			

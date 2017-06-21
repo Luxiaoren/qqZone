@@ -1,5 +1,14 @@
 
-
+<?php
+if($_GET['mes']){//安全退出  销毁session
+	session_start();
+		if($_SESSION['username']){
+			session_unset();
+			session_destroy();
+			
+		}
+}
+?>
 <html>
 	
 	<title>用户登录</title>
@@ -9,8 +18,9 @@
 			#login{
 					margin:200px auto;
 					border:0px silvery solid;
-			}
 
+				
+			}
 		</style>
 	</head>
 		<form action ="logProcess.php" method="post" id="userlog" autocomplete="off">

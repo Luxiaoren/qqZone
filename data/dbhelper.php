@@ -30,7 +30,7 @@ class dbhelper{
 	}
 
 	public function close(){
-		$conn->close();
+		$this->conn->close();
 	}
 
 }

@@ -12,6 +12,7 @@ $email=$_SESSION['email'];
 	$sql="select user_friend from user_info where id=1";
 	//$sql="update user_info set user_friend ='Tom' where id=1";
 	$res = $db->execute_select($sql);
+	$db->close();
 	$friends=$res[0];
 	
 	$friend=explode('|', $friends);

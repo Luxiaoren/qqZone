@@ -1,6 +1,12 @@
 *{
 	margin:0 auto;
 }
+#regiestMain{
+	margin-left: 50%;
+	margin-right: 50%;
+	
+}
+
 #perShow{
 	width: 30%;
 	height: 500px;

@@ -32,13 +32,24 @@ if($username==""||$password==""||$email==""){
 $db =new dbhelper();
 
 $sql="insert into user_log(username,password,email)value('$username','$password','$email')";
-echo $sql;
+
 $res=$db->execute_insert_updata($sql);
 
 if($res==false){
-	echo"no";
+	setcookie("error","用户名已存在");
+	header("Location:regiest.php");
+	die();
 }
-print_r($res);
+elseif ($res==1) {
+	setcookie("error","注册完成");
+	$sql="select * from user_log where username='$username'";
+	$res=$db->execute_select($sql);
+	$id=$res[0];
+	$sql="insert into user_info(user_id,user_name,username,user_idcard,user_sex,user_birth,user_telno) values($id,'$username','$name','$idcard','$sex','$birth','$telno') ";
+	$res=$db->execute_insert_updata($sql);
+	header("Location:regiest.php");
+	die();
+}
 
 
 

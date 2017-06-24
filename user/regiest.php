@@ -11,7 +11,7 @@ $idcard=$_COOKIE["idcard"];
 $sex=$_COOKIE["sex"];
 $birth=$_COOKIE["birth"];
 $telno=$_COOKIE["telno"];
-
+$error=$_COOKIE['error'];
 
 foreach($_COOKIE as $key=>$val){
 setcookie($key,"",time()-1);
@@ -31,7 +31,7 @@ setcookie($key,"",time()-1);
 			<table border="1px" >
 				<tr><td colspan="2" style="text-align: center;">注册用户</td></tr>
 				<tr><td>用户名：</td><td><input type="text" name="username" value="<?php echo "$username";?>" /></td><td><span style="color: red;">*</span></td></tr>
-				<tr><td>密码：</td><td><input type="text" name="password"/></td><td><span style="color: red;">*</span></td></tr>
+				<tr><td>密码：</td><td><input type="text" name="password" value="<?php echo "$password"; ?>" /></td><td><span style="color: red;">*</span></td></tr>
 				<tr><td>邮箱：</td><td><input type="text" name="email" value="<?php echo $email;?>" /></td><td><span style="color: red;">*</span></td></tr>
 				<tr><td>姓名：</td><td><input type="text" name="name"/></td></tr>
 				<tr><td>身份证号：</td><td><input type="text" name="idcard"/></td></tr>
@@ -42,6 +42,7 @@ setcookie($key,"",time()-1);
 				<tr><td>联系方式：</td><td><input type="text" name="telno"/></td></tr>
 				<tr><td><input type="reset" name="reset" value="重置" style="width: 100%;"></td>
 				<td><input type="submit" name="Submit" value="注册" style="width: 100%;"/></td></tr>
+				<tr><td colspan="2" style="text-align: center;"> <?php echo $error; if($error=="注册完成"){header("Refresh:3;url=login.php");}?></td></tr>
 			</table>
 		</form>
 	</div>

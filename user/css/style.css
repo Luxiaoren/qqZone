@@ -1,6 +1,15 @@
 *{
 	margin:0 auto;
 }
+#addFriend{
+	width: 40%;
+	height: 500px;
+	margin-left: 30%;
+	margin-right: 30%;
+	float: left;
+	background-color: red;
+}
+
 #regiestMain{
 	margin-left: 30%;
 	margin-right: 30%;
@@ -32,6 +41,7 @@
 	width: 60px;
 	height: 40px;
 	margin-top: 10px;
+	float: left;
 }
 
 #friendList{
@@ -42,6 +52,21 @@
 	background-color: yellow;
 	float: left;
 
+}
+
+#friendList > span{
+	float:left;
+	margin-top:40%;
+	margin-left:25%;
+}
+
+#friendList > span > font{
+	float:left;
+	margin-top:6px;
+}
+
+#friendList > span > a{
+	font-size:25px;
 }
 
 #selfShow{
@@ -69,11 +94,17 @@
 }
 
 
-.buttonStyle{
+.buttonExitStyle{
 	margin-left:80%;
 	margin-top:20px;
 	float: left;
 
+}
+
+.buttonCenterStyle{
+	margin-left:90%;
+	margin-top:20px;
+	float: left;
 }
 .friendListName{
 	margin-left: 20px;

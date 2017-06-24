@@ -44,6 +44,7 @@ $email=$_SESSION['email'];
 			}
 		</script>
 	</head>
+	<body>
 <iframe src="./common/head.html" width ="100%" height ="62px" name = "head"  scrolling="no" frameborder="no"></iframe>
 <div id="friendList"><!--好友列表模块-->
     <a href="#" style='margin-left:30px;'>好友列表</a><br>
@@ -52,7 +53,9 @@ $email=$_SESSION['email'];
 			for($i=0;$i<sizeof($friend);$i++){
 			echo "<br/><a href='#'style='margin-left:20px;'>·$friend[$i]</a>";
 			}
-		}
+		}else{
+				echo "<br/><span><font>$mes</font><a href='./addFriend/addFriend.php'>+</a><span>";
+			}
 		?>
 </div>
 <div id="selfShow">
@@ -65,4 +68,5 @@ $email=$_SESSION['email'];
 <div id="zoneSetting">
 	空间信息设置
 </div>
+</body>
 </html>

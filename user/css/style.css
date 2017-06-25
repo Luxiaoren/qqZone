@@ -1,6 +1,15 @@
 *{
 	margin:0 auto;
 }
+
+#show{
+	border: 0px black solid;
+	width: 25%;
+	height: auto;
+	margin-left:35%;  
+	margin-top: 50px;
+	float: left;
+}
 #addFriend{
 	width: 40%;
 	height: 500px;
@@ -10,6 +19,17 @@
 	background-color: red;
 }
 
+#addFriend  a{
+	
+	text-decoration:none; 
+	color: black;
+	float: left;
+} 
+
+#addFriend font{
+	float: left;
+	margin-left:0%;
+}
 #regiestMain{
 	margin-left: 30%;
 	margin-right: 30%;
